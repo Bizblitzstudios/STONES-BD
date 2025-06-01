@@ -4,266 +4,718 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stone Supply & Services | Industrial Solutions Partner</title>
-    <meta name="description" content="Stone for Supply and Services delivers high-quality industrial materials, steel products, and customized engineering solutions for construction, energy, and manufacturing sectors.">
-    <link rel="stylesheet" href="css/style.css">
+    <meta name="description" content="Premium industrial materials, steel products, and engineering solutions for construction, energy, and manufacturing sectors">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="css/main.min.css" as="style">
+    <link rel="preload" href="js/main.min.js" as="script">
+    <link rel="preload" href="fonts/poppins-v20-latin-600.woff2" as="font" type="font/woff2" crossorigin>
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/main.min.css">
+    
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
-<body>
-    <!-- Header/Navigation -->
+<body class="preload">
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-logo">
+                <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M60 0L120 30V90L60 120L0 90V30L60 0Z" fill="#0056b3"/>
+                    <path d="M60 30L90 45V75L60 90L30 75V45L60 30Z" fill="#ffffff"/>
+                </svg>
+            </div>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Action Buttons -->
+    <div class="fab-container">
+        <a href="#contact" class="fab-button fab-main" aria-label="Contact us">
+            <i class="fas fa-envelope"></i>
+        </a>
+        <a href="tel:+201090553888" class="fab-button" aria-label="Call us">
+            <i class="fas fa-phone"></i>
+        </a>
+        <a href="https://wa.me/201090553888" class="fab-button" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <!-- Header -->
     <header class="header">
         <div class="container">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="images/logo.png" alt="Stone Supply & Services Logo">
+            <div class="header-inner">
+                <a href="index.html" class="logo">
+                    <svg width="180" height="50" viewBox="0 0 180 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 0L40 10V30L20 40L0 30V10L20 0Z" fill="#0056b3"/>
+                        <path d="M20 10L30 15V25L20 30L10 25V15L20 10Z" fill="#ffffff"/>
+                        <text x="50" y="30" font-family="Poppins" font-size="24" font-weight="600" fill="#333">STONE SUPPLY</text>
+                    </svg>
                 </a>
-            </div>
-            <nav class="navbar">
-                <ul>
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li class="dropdown">
-                        <a href="services/index.html">Services <i class="fas fa-chevron-down"></i></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="services/raw-materials.html">Raw Material Supply</a></li>
-                            <li><a href="services/steel-supply.html">Steel Supply</a></li>
-                            <li><a href="services/welding-solutions.html">Welding Solutions</a></li>
-                            <li><a href="services/equipment-parts.html">Equipment & Parts Manufacturing</a></li>
-                            <li><a href="services/support-services.html">Support Services</a></li>
-                            <li><a href="services/scrap-purchasing.html">Scrap Purchasing</a></li>
-                            <li><a href="services/digital-transformation.html">Digital Transformation</a></li>
-                            <li><a href="services/alternative-fuels.html">Alternative Fuel Supply</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                </ul>
-            </nav>
-            <div class="mobile-menu-btn">
-                <i class="fas fa-bars"></i>
+                
+                <nav class="main-nav">
+                    <ul class="nav-list">
+                        <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
+                        <li class="nav-item dropdown">
+                            <a href="about.html" class="nav-link">About <i class="fas fa-chevron-down"></i></a>
+                            <div class="dropdown-menu">
+                                <a href="about.html#mission">Mission & Vision</a>
+                                <a href="about.html#values">Our Values</a>
+                                <a href="about.html#team">Our Team</a>
+                                <a href="about.html#certifications">Certifications</a>
+                            </div>
+                        </li>
+                        <li class="nav-item mega-menu">
+                            <a href="services.html" class="nav-link">Services <i class="fas fa-chevron-down"></i></a>
+                            <div class="mega-menu-content">
+                                <div class="container">
+                                    <div class="mega-menu-grid">
+                                        <div class="mega-menu-col">
+                                            <h3>Material Solutions</h3>
+                                            <a href="services/raw-materials.html">
+                                                <i class="fas fa-cubes"></i> Raw Material Supply
+                                            </a>
+                                            <a href="services/steel-supply.html">
+                                                <i class="fas fa-industry"></i> Steel Supply
+                                            </a>
+                                            <a href="services/scrap-purchasing.html">
+                                                <i class="fas fa-recycle"></i> Scrap Purchasing
+                                            </a>
+                                        </div>
+                                        <div class="mega-menu-col">
+                                            <h3>Engineering Services</h3>
+                                            <a href="services/welding-solutions.html">
+                                                <i class="fas fa-wrench"></i> Welding Solutions
+                                            </a>
+                                            <a href="services/equipment-parts.html">
+                                                <i class="fas fa-cogs"></i> Equipment & Parts
+                                            </a>
+                                            <a href="services/support-services.html">
+                                                <i class="fas fa-headset"></i> Support Services
+                                            </a>
+                                        </div>
+                                        <div class="mega-menu-col">
+                                            <h3>Advanced Solutions</h3>
+                                            <a href="services/digital-transformation.html">
+                                                <i class="fas fa-laptop-code"></i> Digital Transformation
+                                            </a>
+                                            <a href="services/alternative-fuels.html">
+                                                <i class="fas fa-leaf"></i> Alternative Fuels
+                                            </a>
+                                            <a href="services/custom-solutions.html">
+                                                <i class="fas fa-lightbulb"></i> Custom Solutions
+                                            </a>
+                                        </div>
+                                        <div class="mega-menu-featured">
+                                            <div class="featured-content">
+                                                <h3>Why Choose Our Services?</h3>
+                                                <p>We combine industry expertise with innovative solutions to deliver exceptional results for your projects.</p>
+                                                <a href="services.html" class="btn btn-outline-white">View All Services</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item"><a href="projects.html" class="nav-link">Projects</a></li>
+                        <li class="nav-item"><a href="blog.html" class="nav-link">Insights</a></li>
+                        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="header-cta">
+                    <a href="tel:+201090553888" class="phone-link">
+                        <i class="fas fa-phone-alt"></i> +20 109 055 3888
+                    </a>
+                    <a href="#request-quote" class="btn btn-primary btn-sm">Get Quote</a>
+                </div>
+                
+                <button class="hamburger" aria-label="Menu">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
             </div>
         </div>
     </header>
 
-    <!-- Hero Banner -->
+    <!-- Hero Section -->
     <section class="hero">
+        <div class="hero-slider">
+            <!-- Slide 1 -->
+            <div class="hero-slide active" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('assets/images/hero-industrial.jpg');">
+                <div class="container">
+                    <div class="hero-content" data-aos="fade-up" data-aos-delay="100">
+                        <h1 class="hero-title">Precision Industrial Solutions</h1>
+                        <p class="hero-subtitle">Delivering high-quality materials and engineering services for construction, energy, and manufacturing sectors</p>
+                        <div class="hero-buttons">
+                            <a href="services.html" class="btn btn-primary btn-lg">Explore Services</a>
+                            <a href="#video-tour" class="btn btn-outline-white btn-lg">
+                                <i class="fas fa-play"></i> Watch Video
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Slide 2 -->
+            <div class="hero-slide" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('assets/images/hero-steel.jpg');">
+                <div class="container">
+                    <div class="hero-content">
+                        <h1 class="hero-title">Premium Steel Supply</h1>
+                        <p class="hero-subtitle">High-performance industrial steel products tailored to your project requirements</p>
+                        <div class="hero-buttons">
+                            <a href="services/steel-supply.html" class="btn btn-primary btn-lg">Steel Products</a>
+                            <a href="contact.html" class="btn btn-outline-white btn-lg">Request Samples</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Slide 3 -->
+            <div class="hero-slide" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('assets/images/hero-sustainability.jpg');">
+                <div class="container">
+                    <div class="hero-content">
+                        <h1 class="hero-title">Sustainable Industrial Practices</h1>
+                        <p class="hero-subtitle">Innovative solutions that reduce environmental impact while maintaining performance</p>
+                        <div class="hero-buttons">
+                            <a href="services/alternative-fuels.html" class="btn btn-primary btn-lg">Green Solutions</a>
+                            <a href="about.html#sustainability" class="btn btn-outline-white btn-lg">Our Commitment</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="hero-slider-controls">
+            <button class="slider-prev" aria-label="Previous slide">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <div class="slider-dots"></div>
+            <button class="slider-next" aria-label="Next slide">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+        
+        <div class="hero-scroll-down">
+            <a href="#about" class="scroll-link" aria-label="Scroll down">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <section class="stats-bar">
         <div class="container">
-            <div class="hero-content">
-                <h1>Empowering Industries with Precision & Innovation</h1>
-                <p>With expertise in manufacturing, industrial support, and sustainable practices, we ensure efficiency, reliability, and excellence at every stage.</p>
-                <div class="hero-btns">
-                    <a href="services/index.html" class="btn btn-primary">Our Services</a>
-                    <a href="contact.html" class="btn btn-secondary">Contact Us</a>
+            <div class="stats-grid">
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="stat-number" data-count="250">0</div>
+                    <div class="stat-label">Projects Completed</div>
+                </div>
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stat-number" data-count="98">0</div>
+                    <div class="stat-label">Client Satisfaction</div>
+                </div>
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="stat-number" data-count="15">0</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="stat-number" data-count="40">0</div>
+                    <div class="stat-label">Industry Partners</div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section class="about-section">
+    <section id="about" class="section about-section">
         <div class="container">
-            <div class="about-content">
-                <h2>About Stone Supply & Services</h2>
-                <p>Stone for Supply and Services is a team of experienced professionals delivering high-quality industrial materials, steel products, and customized engineering solutions. Serving construction, energy, and manufacturing sectors, we focus on precision, innovation, and sustainability to meet client needs.</p>
-                <p>Committed to transparency, quality, and long-term partnerships, Stone aims to empower industries with reliable, efficient, and scalable solutions that drive growth and operational success.</p>
-                <a href="about.html" class="btn btn-outline">Learn More About Us</a>
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">Who We Are</span>
+                <h2 class="section-title">Building Industrial Excellence Since 2008</h2>
+                <p class="section-description">Stone Supply & Services combines deep industry knowledge with innovative solutions to deliver exceptional results for our clients.</p>
             </div>
-            <div class="about-image">
-                <img src="images/about-image.jpg" alt="Stone Supply & Services Team">
+            
+            <div class="about-content">
+                <div class="about-text" data-aos="fade-right">
+                    <h3>Your Trusted Industrial Partner</h3>
+                    <p>At Stone for Supply and Services, we are a team of experienced professionals dedicated to delivering high-quality industrial and engineering solutions tailored to the needs of our clients. We specialize in the supply of premium raw materials, steel products, and customized services designed to meet the highest standards of precision, performance, and reliability.</p>
+                    
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>ISO 9001:2015 Certified</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Environmental Compliance</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>24/7 Technical Support</span>
+                        </div>
+                    </div>
+                    
+                    <a href="about.html" class="btn btn-outline-primary">Learn More About Us</a>
+                </div>
+                
+                <div class="about-media" data-aos="fade-left">
+                    <div class="media-container">
+                        <div class="main-image">
+                            <img src="assets/images/about-main.jpg" alt="Our industrial facility" loading="lazy">
+                        </div>
+                        <div class="secondary-image">
+                            <img src="assets/images/about-secondary.jpg" alt="Our team at work" loading="lazy">
+                        </div>
+                        <div class="experience-badge">
+                            <div class="badge-number">15+</div>
+                            <div class="badge-text">Years of Excellence</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section class="services-section">
+    <section class="section services-section bg-light">
         <div class="container">
-            <div class="section-header">
-                <h2>Our Comprehensive Services</h2>
-                <p>We provide end-to-end industrial solutions tailored to your specific needs</p>
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">What We Offer</span>
+                <h2 class="section-title">Comprehensive Industrial Solutions</h2>
+                <p class="section-description">Our integrated approach ensures you get high-quality materials, expert engineering, and sustainable support all in one place.</p>
             </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-cubes"></i>
-                    </div>
-                    <h3>Raw Material Supply</h3>
-                    <p>Premium raw materials including slag, iron oxide, gypsum, basalt, quartz, and more for industrial applications.</p>
-                    <a href="services/raw-materials.html" class="btn-link">Learn More <i class="fas fa-arrow-right"></i></a>
+            
+            <div class="services-tabs" data-aos="fade-up" data-aos-delay="100">
+                <div class="tabs-header">
+                    <div class="tab-button active" data-tab="material">Material Solutions</div>
+                    <div class="tab-button" data-tab="engineering">Engineering Services</div>
+                    <div class="tab-button" data-tab="advanced">Advanced Solutions</div>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-industry"></i>
+                
+                <div class="tabs-content">
+                    <div class="tab-pane active" id="material">
+                        <div class="services-grid">
+                            <div class="service-card">
+                                <div class="service-icon">
+                                    <i class="fas fa-cubes"></i>
+                                </div>
+                                <h3>Raw Material Supply</h3>
+                                <p>Premium raw materials including slag, iron oxide, gypsum, basalt, quartz, and more for industrial applications.</p>
+                                <a href="services/raw-materials.html" class="service-link">
+                                    Learn More <i class="fas fa-arrow-right"></i>
+                                </a>
+                                <div class="service-hover">
+                                    <h4>Key Materials:</h4>
+                                    <ul>
+                                        <li>Slag & Iron Oxide</li>
+                                        <li>Gypsum & Basalt</li>
+                                        <li>Quartz & Limestone</li>
+                                        <li>Calcium Carbonate</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="service-card">
+                                <div class="service-icon">
+                                    <i class="fas fa-industry"></i>
+                                </div>
+                                <h3>Steel Supply</h3>
+                                <p>High-performance industrial steel products including stainless steel, anti-wear materials, and grade 52 steel.</p>
+                                <a href="services/steel-supply.html" class="service-link">
+                                    Learn More <i class="fas fa-arrow-right"></i>
+                                </a>
+                                <div class="service-hover">
+                                    <h4>Steel Types:</h4>
+                                    <ul>
+                                        <li>Stainless Steel</li>
+                                        <li>Anti-Wear Materials</li>
+                                        <li>Chromium Carbide</li>
+                                        <li>Corten Steel</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="service-card">
+                                <div class="service-icon">
+                                    <i class="fas fa-recycle"></i>
+                                </div>
+                                <h3>Scrap Purchasing</h3>
+                                <p>Responsible scrap purchasing services that support recycling and sustainable industrial practices.</p>
+                                <a href="services/scrap-purchasing.html" class="service-link">
+                                    Learn More <i class="fas fa-arrow-right"></i>
+                                </a>
+                                <div class="service-hover">
+                                    <h4>Benefits:</h4>
+                                    <ul>
+                                        <li>Waste Management</li>
+                                        <li>Cost Reduction</li>
+                                        <li>Circular Economy</li>
+                                        <li>Environmental Responsibility</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <h3>Steel Supply</h3>
-                    <p>High-performance industrial steel products including stainless steel, anti-wear materials, and grade 52 steel.</p>
-                    <a href="services/steel-supply.html" class="btn-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    
+                    <div class="tab-pane" id="engineering">
+                        <div class="services-grid">
+                            <!-- Engineering services cards -->
+                        </div>
+                    </div>
+                    
+                    <div class="tab-pane" id="advanced">
+                        <div class="services-grid">
+                            <!-- Advanced solutions cards -->
+                        </div>
+                    </div>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-wrench"></i>
-                    </div>
-                    <h3>Welding Solutions</h3>
-                    <p>Expert welding services including hardfacing, crack repair, and specialized alloy welding for industrial equipment.</p>
-                    <a href="services/welding-solutions.html" class="btn-link">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+            
+            <div class="text-center mt-5" data-aos="fade-up">
+                <a href="services.html" class="btn btn-primary">View All Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Tour Section -->
+    <section id="video-tour" class="section video-section">
+        <div class="container">
+            <div class="video-container" data-aos="fade-up">
+                <div class="video-poster">
+                    <img src="assets/images/video-poster.jpg" alt="Our facility video tour" loading="lazy">
+                    <button class="video-play-button" aria-label="Play video">
+                        <i class="fas fa-play"></i>
+                    </button>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-cogs"></i>
+                <div class="video-content">
+                    <span class="section-subtitle">Virtual Tour</span>
+                    <h2 class="section-title">Explore Our State-of-the-Art Facilities</h2>
+                    <p>Take a behind-the-scenes look at our manufacturing processes, quality control measures, and innovative solutions that set us apart in the industry.</p>
+                    <div class="video-features">
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i> Advanced Manufacturing
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i> Quality Assurance
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i> Sustainable Practices
+                        </div>
                     </div>
-                    <h3>Equipment & Parts</h3>
-                    <p>Manufacturing of high-precision equipment and spare parts for industrial applications.</p>
-                    <a href="services/equipment-parts.html" class="btn-link">Learn More <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-headset"></i>
-                    </div>
-                    <h3>Support Services</h3>
-                    <p>Comprehensive industrial support including maintenance, installations, labor supply, and technical consultations.</p>
-                    <a href="services/support-services.html" class="btn-link">Learn More <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-recycle"></i>
-                    </div>
-                    <h3>Scrap Purchasing</h3>
-                    <p>Responsible scrap purchasing services that support recycling and sustainable industrial practices.</p>
-                    <a href="services/scrap-purchasing.html" class="btn-link">Learn More <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-laptop-code"></i>
-                    </div>
-                    <h3>Digital Transformation</h3>
-                    <p>Advanced software solutions including ERP implementation, big data, and cloud transformation services.</p>
-                    <a href="services/digital-transformation.html" class="btn-link">Learn More <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-leaf"></i>
-                    </div>
-                    <h3>Alternative Fuels</h3>
-                    <p>Sustainable energy solutions including RDF production and biomass fuel for industrial applications.</p>
-                    <a href="services/alternative-fuels.html" class="btn-link">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Why Choose Us Section -->
-    <section class="why-choose-us">
+    <!-- Projects Showcase -->
+    <section class="section projects-section">
         <div class="container">
-            <div class="section-header">
-                <h2>Why Choose Stone Supply & Services?</h2>
-                <p>We are more than just a supplier—we are a strategic partner committed to delivering end-to-end industrial solutions</p>
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">Our Work</span>
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-description">Discover how we've helped clients across various industries achieve their operational goals.</p>
             </div>
-            <div class="features-grid">
-                <div class="feature-box">
-                    <div class="feature-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3>Industry Expertise</h3>
-                    <p>Tailored solutions across industries, ensuring our services meet the unique needs of each client.</p>
-                </div>
-                <div class="feature-box">
-                    <div class="feature-icon">
-                        <i class="fas fa-cogs"></i>
-                    </div>
-                    <h3>Customized Solutions</h3>
-                    <p>From raw materials to precision engineering, we provide flexible solutions designed to fit your operations.</p>
-                </div>
-                <div class="feature-box">
-                    <div class="feature-icon">
-                        <i class="fas fa-tasks"></i>
-                    </div>
-                    <h3>Comprehensive Capabilities</h3>
-                    <p>We manage all types of machines, offering a one-stop solution for all your industrial needs.</p>
-                </div>
-                <div class="feature-box">
-                    <div class="feature-icon">
-                        <i class="fas fa-ruler-combined"></i>
-                    </div>
-                    <h3>Unparalleled Precision</h3>
-                    <p>Our high-accuracy machinery guarantees flawless results with exceptional precision.</p>
-                </div>
-                <div class="feature-box">
-                    <div class="feature-icon">
-                        <i class="fas fa-award"></i>
-                    </div>
-                    <h3>Top-Quality Output</h3>
-                    <p>We are committed to delivering excellence in every aspect of our work, ensuring the highest standards.</p>
-                </div>
-                <div class="feature-box">
-                    <div class="feature-icon">
-                        <i class="fas fa-handshake"></i>
-                    </div>
-                    <h3>Long-Term Partnerships</h3>
-                    <p>We build lasting relationships based on trust, quality, and mutual success.</p>
-                </div>
+            
+            <div class="projects-grid">
+                <!-- Project items with hover effects -->
+            </div>
+            
+            <div class="text-center mt-5" data-aos="fade-up">
+                <a href="projects.html" class="btn btn-outline-primary">View All Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section testimonials-section bg-dark text-white">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">Client Feedback</span>
+                <h2 class="section-title">What Our Clients Say</h2>
+            </div>
+            
+            <div class="testimonials-slider" data-aos="fade-up" data-aos-delay="100">
+                <!-- Testimonial slides -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="section process-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">How We Work</span>
+                <h2 class="section-title">Our Proven Process</h2>
+                <p class="section-description">A systematic approach that ensures quality, efficiency, and client satisfaction at every stage.</p>
+            </div>
+            
+            <div class="process-steps">
+                <!-- Process steps with icons -->
             </div>
         </div>
     </section>
 
     <!-- CTA Section -->
-    <section class="cta-section">
+    <section class="section cta-section bg-primary text-white">
         <div class="container">
-            <div class="cta-content">
-                <h2>Ready to Enhance Your Industrial Operations?</h2>
-                <p>Contact us today to discuss how we can support your projects with our comprehensive industrial solutions.</p>
-                <a href="contact.html" class="btn btn-primary">Get in Touch</a>
+            <div class="cta-content" data-aos="fade-up">
+                <h2>Ready to Start Your Project?</h2>
+                <p>Contact us today to discuss your requirements and discover how we can support your industrial operations.</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-light">Get in Touch</a>
+                    <a href="tel:+201090553888" class="btn btn-outline-light">
+                        <i class="fas fa-phone-alt"></i> Call Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="section blog-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">Latest Insights</span>
+                <h2 class="section-title">Industry News & Updates</h2>
+                <p class="section-description">Stay informed with our expert analysis and industry trends.</p>
+            </div>
+            
+            <div class="blog-grid">
+                <!-- Blog posts -->
+            </div>
+            
+            <div class="text-center mt-5" data-aos="fade-up">
+                <a href="blog.html" class="btn btn-outline-primary">View All Articles</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="section partners-section bg-light">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">Trusted By</span>
+                <h2 class="section-title">Our Valued Partners</h2>
+            </div>
+            
+            <div class="partners-slider" data-aos="fade-up" data-aos-delay="100">
+                <!-- Partner logos -->
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col about-col">
-                    <h3>Stone Supply & Services</h3>
-                    <p>Your trusted partner in high-quality raw materials, engineering solutions, and sustainable industrial support.</p>
-                    <div class="social-links">
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <div class="footer-main">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-col footer-about">
+                        <div class="footer-logo">
+                            <svg width="180" height="50" viewBox="0 0 180 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20 0L40 10V30L20 40L0 30V10L20 0Z" fill="#ffffff"/>
+                                <path d="M20 10L30 15V25L20 30L10 25V15L20 10Z" fill="#0056b3"/>
+                                <text x="50" y="30" font-family="Poppins" font-size="24" font-weight="600" fill="#ffffff">STONE SUPPLY</text>
+                            </svg>
+                        </div>
+                        <p>Your trusted partner in high-quality raw materials, engineering solutions, and sustainable industrial support.</p>
+                        
+                        <div class="footer-social">
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-col footer-services">
+                        <h3>Our Services</h3>
+                        <ul>
+                            <li><a href="services/raw-materials.html">Raw Material Supply</a></li>
+                            <li><a href="services/steel-supply.html">Steel Supply</a></li>
+                            <li><a href="services/welding-solutions.html">Welding Solutions</a></li>
+                            <li><a href="services/equipment-parts.html">Equipment & Parts</a></li>
+                            <li><a href="services/support-services.html">Support Services</a></li>
+                            <li><a href="services/digital-transformation.html">Digital Transformation</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-col footer-links">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="projects.html">Our Projects</a></li>
+                            <li><a href="blog.html">Industry Insights</a></li>
+                            <li><a href="careers.html">Careers</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="privacy.html">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-col footer-contact">
+                        <h3>Contact Info</h3>
+                        <ul>
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>80 Mosadek St., #901, Dokki, Giza, Egypt</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone-alt"></i>
+                                <span>+20 109 055 3888</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <span>yasser.zak@stone-ss.com</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-clock"></i>
+                                <span>Sun-Thu: 8:00 AM - 5:00 PM</span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-                <div class="footer-col services-col">
-                    <h3>Services</h3>
-                    <ul>
-                        <li><a href="services/raw-materials.html">Raw Material Supply</a></li>
-                        <li><a href="services/steel-supply.html">Steel Supply</a></li>
-                        <li><a href="services/welding-solutions.html">Welding Solutions</a></li>
-                        <li><a href="services/equipment-parts.html">Equipment & Parts</a></li>
-                        <li><a href="services/support-services.html">Support Services</a></li>
-                        <li><a href="services/scrap-purchasing.html">Scrap Purchasing</a></li>
-                        <li><a href="services/digital-transformation.html">Digital Transformation</a></li>
-                        <li><a href="services/alternative-fuels.html">Alternative Fuels</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col contact-col">
-                    <h3>Contact Us</h3>
-                    <ul class="contact-info">
-                        <li><i class="fas fa-map-marker-alt"></i> 80 Mosadek St., #901, Dokki, Giza, Egypt</li>
-                        <li><i class="fas fa-phone"></i> +20 109 055 3888</li>
-                        <li><i class="fas fa-envelope"></i> yasser.zak@stone-ss.com</li>
-                        <li><i class="fas fa-globe"></i> www.stone-ss.com</li>
-                    </ul>
-                </div>
             </div>
-            <div class="footer-bottom">
-                <div class="copyright">
-                    <p>&copy; 2023 Stone Supply & Services. All Rights Reserved.</p>
-                </div>
-                <div class="footer-links">
-                    <ul>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
-                        <li><a href="#">Sitemap</a></li>
-                    </ul>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-inner">
+                    <div class="copyright">
+                        &copy; 2023 Stone Supply & Services. All Rights Reserved.
+                    </div>
+                    
+                    <div class="footer-extra-links">
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Sitemap</a>
+                    </div>
                 </div>
             </div>
         </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <!-- Request Quote Modal -->
+    <div class="modal" id="requestQuoteModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <button class="modal-close" aria-label="Close modal">
+                    <i class="fas fa-times"></i>
+                </button>
+                
+                <div class="modal-header">
+                    <h3>Request a Quote</h3>
+                    <p>Fill out the form below and our team will get back to you within 24 hours.</p>
+                </div>
+                
+                <div class="modal-body">
+                    <form id="quoteForm">
+                        <div class="form-group">
+                            <label for="quoteName">Full Name *</label>
+                            <input type="text" id="quoteName" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="quoteCompany">Company Name *</label>
+                            <input type="text" id="quoteCompany" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="quoteEmail">Email Address *</label>
+                            <input type="email" id="quoteEmail" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="quotePhone">Phone Number *</label>
+                            <input type="tel" id="quotePhone" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="quoteService">Service Interested In *</label>
+                            <select id="quoteService" required>
+                                <option value="">Select a service</option>
+                                <option value="raw-materials">Raw Material Supply</option>
+                                <option value="steel-supply">Steel Supply</option>
+                                <option value="welding">Welding Solutions</option>
+                                <option value="equipment">Equipment & Parts</option>
+                                <option value="support">Support Services</option>
+                                <option value="digital">Digital Transformation</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="quoteMessage">Project Details *</label>
+                            <textarea id="quoteMessage" rows="4" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-block">Submit Request</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <script src="js/main.min.js"></script>
+    
+    <script>
+        // Initialize AOS animation
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            offset: 100
+        });
+        
+        // Remove preload class after page loads
+        window.addEventListener('load', function() {
+            document.body.classList.remove('preload');
+            
+            // Animate stats counter
+            const counters = document.querySelectorAll('.stat-number');
+            const speed = 200;
+            
+            counters.forEach(counter => {
+                const animate = () => {
+                    const value = +counter.getAttribute('data-count');
+                    const data = +counter.innerText;
+                    const time = value / speed;
+                    
+                    if(data < value) {
+                        counter.innerText = Math.ceil(data + time);
+                        setTimeout(animate, 1);
+                    } else {
+                        counter.innerText = value;
+                    }
+                };
+                
+                animate();
+            });
+        });
+    </script>
 </body>
 </html>
